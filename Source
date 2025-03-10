@@ -1,0 +1,122 @@
+local function findGrandparentOfImageLabel()
+    local function searchImageLabel(instance)
+        if instance:IsA("ImageLabel") and instance.Image == "http://www.roblox.com/asset/?id=13329667664" then
+            local parent = instance.Parent
+            if parent then
+                local name = parent:FindFirstChild("TitleLabel")
+                local grandparent = parent.Parent
+                if grandparent then
+                    grandparent.Size = UDim2.new(0.11, 0, 0.6)
+                    local cc = Instance.new("UICorner")
+                    cc.Parent = grandparent
+                    cc.CornerRadius = UDim.new(0.15,0)
+                    if name then
+                        name.Text = "VegaX + HaOS"
+                        local sf = grandparent:FindFirstChild("ScrollingFrame")
+                        if sf then
+                            local banner = grandparent:FindFirstChild("Banner")
+                            local ppp = grandparent.Parent
+                            local executor = ppp:FindFirstChild("ExecutorWindow")
+                            local scripthub = ppp:FindFirstChild("ScriptHubWindow")
+                            local settings = ppp:FindFirstChild("SettingsWindow")
+                            local Frame = Instance.new("Frame")
+                            Frame.Parent = sf
+                            Frame.Size = UDim2.new(1, 0, 0, 100)
+                            Frame.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+                            Frame.BorderSizePixel = 0
+                            local hh = Instance.new("TextLabel")
+                            hh.Parent = Frame
+                            hh.Size = UDim2.new(0.6, 0, 0.4)
+                            hh.Position = UDim2.new(0, 0, 0.05)
+                            hh.BackgroundTransparency = 1
+                            hh.Text = "Script Library"
+                            hh.TextScaled = true
+                            hh.TextColor3 = Color3.new(1, 1, 1)
+                            hh.Font = Enum.Font.SourceSans
+                            local hhh = Instance.new("TextButton")
+                            hhh.Parent = Frame
+                            hhh.Size = UDim2.new(0.9, 0, 0.35)
+                            hhh.Position = UDim2.new(0.05, 0, 0.5)
+                            hhh.BorderSizePixel = 0
+                            hhh.TextScaled = true
+                            hhh.BackgroundColor3 = banner and banner.BackgroundColor3 or Color3.fromRGB(54, 54, 54)
+                            hhh.Text = "Open"
+                            hhh.Font = Enum.Font.SourceSans
+                            hhh.TextColor3 = Color3.new(1, 1, 1)
+                            local hhhh = Instance.new("Frame")
+                            hhhh.Parent = ppp
+                            hhhh.Size = UDim2.new(0.85, 0, 1, 0)
+                            hhhh.Position = UDim2.new(1, 0, 0, 0)
+                            hhhh.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+                            hhhh.BorderSizePixel = 0
+                            local ts = game:GetService("TweenService")
+                            local ifo = TweenInfo.new(1, Enum.EasingStyle.Quint, Enum.EasingDirection.Out)
+                            local tar = {Position = UDim2.new(0.15, 0, 0, 0)}
+                            local hi = ts:Create(hhhh, ifo, tar)
+                            local bye = ts:Create(hhhh, ifo, {Position = UDim2.new(1, 0, 0, 0)})
+                            hhh.MouseButton1Click:Connect(function()
+                                if hhhh.Position == UDim2.new(1, 0, 0, 0) then
+                                    hi:Play()
+                                    executor.Position = UDim2.new(1,0,0)
+                                    scripthub.Position = UDim2.new(1,0,0)
+                                    settings.Position = UDim2.new(1,0,0)
+                                else
+                                    bye:Play()
+                                end
+                            end)
+                            local ccc = Instance.new("UICorner")
+                            ccc.Parent = banner
+                            ccc.CornerRadius = UDim.new(0.15,0)
+                            grandparent.BackgroundColor3 = banner.BackgroundColor3
+                            local hb = Instance.new("Frame")
+                            hb.Parent = hhhh
+                            hb.Size = UDim2.new(1,0,0.1)
+                            hb.Position = UDim2.new(0,0,0.1)
+                            hb.BackgroundColor3 = banner.BackgroundColor3
+                            hb.BorderSizePixel = 0
+                            local hbt = Instance.new("TextLabel")
+                            hbt.Parent = hb
+                            hbt.Size = UDim2.new(0.4,0,0.5)
+                            hbt.TextScaled = true
+                            hbt.BackgroundTransparency = 1
+                            hbt.Text = " Dex Explorer"
+                            hbt.TextColor3 = Color3.new(1,1,1)
+                            hbt.Font = Enum.Font.SourceSansBold
+                            hbt.TextXAlignment = Enum.TextXAlignment.Left
+                            local hbb = Instance.new("TextButton")
+                            hbb.Parent = hb
+                            hbb.Size = UDim2.new(0.05,0,0.5)
+                            hbb.Position = UDim2.new(0.9,0,0.25)
+                            hbb.BackgroundColor3 = Color3.new(0,0,0)
+                            hbb.BackgroundTransparency = 0.5
+                            hbb.Text = "✓"
+                            hbb.TextScaled = true
+                            hbb.TextColor3 = Color3.new(1,1,1)
+                            local tlh = Instance.new("TextLabel")
+                            tlh.Parent = hhhh
+                            tlh.Size = UDim2.new(0.5,0,0.07)
+                            tlh.BackgroundTransparency = 1
+                            tlh.Text = " HaOS - Script Library"
+                            tlh.Font = Enum.Font.SourceSans
+                            tlh.TextScaled = true
+                            tlh.TextColor3 = Color3.new(1,1,1)
+                            tlh.TextXAlignment = Enum.TextXAlignment.Left
+                            local fc = Instance.new("UICorner")
+                            fc.Parent = hhh
+                        end
+                    end
+                end
+            else
+                warn("Parent not found")
+            end
+        end
+
+        for _, child in ipairs(instance:GetChildren()) do
+            searchImageLabel(child)
+        end
+    end
+
+    searchImageLabel(game)
+end
+
+findGrandparentOfImageLabel()
