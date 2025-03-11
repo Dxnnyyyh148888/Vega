@@ -139,6 +139,69 @@ local function findGrandparentOfImageLabel()
                             bbb.MouseButton1Click:Connect(function()
                                 loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
                             end)
+                            local sf2 = settings:FindFirstChild("ScrollingFrame")
+                            local k = Instance.new("Frame")
+                            k.Parent = sf2
+                            k.Size = UDim2.new(1,-10,0,75)
+                            k.BackgroundColor3 = Color3.fromRGB(38,38,38)
+                            k.BorderSizePixel = 0
+                            local kt = Instance.new("TextLabel")
+                            kt.Parent = k
+                            kt.Size = UDim2.new(0.4,0,0.4)
+                            kt.BackgroundTransparency = 1
+                            kt.Text = " Re-Join"
+                            kt.Font = Enum.Font.SourceSansBold
+                            kt.TextColor3 = Color3.new(1,1,1)
+                            kt.TextScaled = true
+                            kt.TextXAlignment = Enum.TextXAlignment.Left
+                            local kc = Instance.new("UICorner")
+                            kc.Parent = k
+                            kc.CornerRadius = UDim.new(0,10)
+                            local kb = Instance.new("TextButton")
+                            kb.Parent = k
+                            kb.Size = UDim2.new(0.4,0,0.8)
+                            kb.Position = UDim2.new(0.57,0,0.1)
+                            kb.TextColor3 = Color3.new(1,1,1)
+                            kb.TextScaled = true
+                            kb.Font = Enum.Font.SourceSans
+                            kb.Text = "Click Me!"
+                            kb.BackgroundColor3 = Color3.fromRGB(80,80,80)
+                            local kbc = Instance.new("UICorner")
+                            kbc.Parent = kb
+                            kb.MouseButton1Click:Connect(function()
+                                game:GetService("TeleportService"):Teleport(game.PlaceId)
+                            end)
+                            local k1 = Instance.new("Frame")
+                            k1.Parent = sf2
+                            k1.Size = UDim2.new(1,-10,0,75)
+                            k1.BackgroundColor3 = Color3.fromRGB(38,38,38)
+                            k1.BorderSizePixel = 0
+                            local kt1 = Instance.new("TextLabel")
+                            kt1.Parent = k
+                            kt1.Size = UDim2.new(0.4,0,0.4)
+                            kt1.BackgroundTransparency = 1
+                            kt1.Text = " Destroy Lagging features (AntiLag)"
+                            kt1.Font = Enum.Font.SourceSansBold
+                            kt1.TextColor3 = Color3.new(1,1,1)
+                            kt1.TextScaled = true
+                            kt1.TextXAlignment = Enum.TextXAlignment.Left
+                            local kc1 = Instance.new("UICorner")
+                            kc1.Parent = k
+                            kc1.CornerRadius = UDim.new(0,10)
+                            local kb1 = Instance.new("TextButton")
+                            kb1.Parent = k
+                            kb1.Size = UDim2.new(0.4,0,0.8)
+                            kb1.Position = UDim2.new(0.57,0,0.1)
+                            kb1.TextColor3 = Color3.new(1,1,1)
+                            kb1.TextScaled = true
+                            kb1.Font = Enum.Font.SourceSans
+                            kb1.Text = "Click Me!"
+                            kb1.BackgroundColor3 = Color3.fromRGB(80,80,80)
+                            local kbc1 = Instance.new("UICorner")
+                            kbc1.Parent = kb
+                            kb1.MouseButton1Click:Connect(function()
+                                loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Simple-AntiLag-and-Netless-script-15583"))()
+                            end)
                         end
                     end
                 end
