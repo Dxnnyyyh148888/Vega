@@ -200,7 +200,7 @@ local function findGrandparentOfImageLabel()
                             local kbc1 = Instance.new("UICorner")
                             kbc1.Parent = kb1
                             kb1.MouseButton1Click:Connect(function()
-                                loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Simple-AntiLag-and-Netless-script-15583"))()
+                                loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-OP-Anti-Lah-24771"))()
                             end)
                         end
                     end
