@@ -114,6 +114,7 @@ local function findGrandparentOfImageLabel()
                             bbt.Size = UDim2.new(0.4,0,0.5)
                             bbt.BackgroundTransparency = 1
                             bbt.Text = " Infinite Yield"
+                            bbt.TextXAlignment = Enum.TextXAlignment.Left
                             bbt.Font = Enum.Font.SourceSansBold
                             bbt.TextColor3 = Color3.new(1,1,1)
                             bbt.TextScaled = true
