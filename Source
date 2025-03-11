@@ -103,6 +103,41 @@ local function findGrandparentOfImageLabel()
                             tlh.TextXAlignment = Enum.TextXAlignment.Left
                             local fc = Instance.new("UICorner")
                             fc.Parent = hhh
+                            local bb = Instance.new("Frame")
+                            bb.Parent = hhhh
+                            bb.Size = UDim2.new(1,0,0.1)
+                            bb.Position = UDim2.new(0,0,0.21)
+                            bb.BackgroundColor3 = banner.BackgroundColor3
+                            bb.BorderSizePixel = 0
+                            local bbt = Instance.new("TextLabel")
+                            bbt.Parent = bb
+                            bbt.Size = UDim2.new(0.4,0,0.5)
+                            bbt.BackgroundTransparency = 1
+                            bbt.Text = " Infinite Yield"
+                            bbt.Font = Enum.Font.SourceSansBold
+                            bbt.TextColor3 = Color3.new(1,1,1)
+                            bbt.TextScaled = true
+                            local bbb = Instance.new("TextButton")
+                            bbb.Parent = bb
+                            bbb.Size = UDim2.new(0.05,0,0.5)
+                            bbb.Position = UDim2.new(0.9,0,0.25)
+                            bbb.Text = "✓"
+                            bbb.TextScaled = true
+                            bbb.TextColor3 = Color3.new(1,1,1?
+                            bbb.BackgroundColor3 = Color3.new(0,0,0)
+                            bbb.BackgroundTransparency = 0.5
+                            local bbe = Instance.new("Frame")
+                            bbe.Parent = hhhh
+                            bbe.Size = UDim2.new(1,0,1)
+                            bbe.Position = UDim2.new(0,0,-1)
+                            bbe.BackgroundColor3 = hhhh.BackgroundColor3
+                            bbe.BorderSizePixel = 0
+                            hbb.MouseButton1Click:Connect(function()
+                                loadstring(game:HttpGet("https://raw.githubusercontent.com/MITUMAxDev/Tools/refs/heads/main/Dex-Explorer.lua"))({"https://discord.gg/PsF7tsxKSS"})
+                            end)
+                            bbb.MouseButton1Click:Connect(function()
+                                loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+                            end)
                         end
                     end
                 end
